@@ -7,7 +7,7 @@ export enum TEXT_TYPE {
   P = "p",
 }
 
-export interface TextType extends Base, HTMLAttributes<HTMLParagraphElement> {
+export interface TextType {
   size?: SIZE_ENUM;
   type?: TEXT_TYPE;
   justify?: boolean;
