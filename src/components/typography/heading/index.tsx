@@ -3,14 +3,14 @@ import { createElement } from "react";
 import cn from "../../../utils/clsxm";
 
 import { COLOR_ENUM } from "../../../@types/types";
-import Props, { HEADING_TYPE } from "../../../@types/heading.model";
+import { HeadingType, HEADING_TYPE } from "../../../@types/heading.model";
 
 export default function Heading({
   type = HEADING_TYPE.H3,
   color = COLOR_ENUM.TEXT,
   className,
   children,
-}: Props) {
+}: HeadingType) {
   const colorClassNames = cn(
     color === COLOR_ENUM.TEXT && "text-i-typography",
     color === COLOR_ENUM.INVERT && "text-i-typography-invert",

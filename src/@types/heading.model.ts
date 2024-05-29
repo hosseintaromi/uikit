@@ -2,9 +2,10 @@ import { HTMLAttributes } from "react";
 
 import Base, { COLOR_ENUM } from "./types";
 
-export interface Props extends Base {
+export interface HeadingType extends Base {
   type: HEADING_TYPE;
   HeadingColor?: COLOR_ENUM.TEXT | COLOR_ENUM.INVERT;
+  color: any;
 }
 
 export enum HEADING_TYPE {
