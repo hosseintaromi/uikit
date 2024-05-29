@@ -1,7 +1,11 @@
 import cn from "../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../@types/types";
-import { BUTTON_TYPE, Props, VARIANT_ENUM } from "../../@types/button.model";
+import {
+  BUTTON_TYPE,
+  ButtonType,
+  VARIANT_ENUM,
+} from "../../@types/button.model";
 import Container from "../container";
 
 const ButtonLoading = () => (
@@ -35,7 +39,7 @@ export default function Button({
   type = BUTTON_TYPE.BUTTON,
   Icon,
   ...props
-}: Props) {
+}: ButtonType) {
   return (
     <button
       {...props}
