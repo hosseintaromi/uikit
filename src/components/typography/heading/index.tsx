@@ -3,7 +3,7 @@ import { createElement } from "react";
 import cn from "../../../utils/clsxm";
 
 import { COLOR_ENUM } from "../../../@types/types";
-import Props, { HEADING_TYPE } from "./type";
+import Props, { HEADING_TYPE } from "../../../@types/heading.model";
 
 export default function Heading({
   type = HEADING_TYPE.H3,

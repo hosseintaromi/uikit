@@ -3,7 +3,7 @@ import { createElement } from "react";
 import cn from "../../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../../@types/types";
-import { Props, TEXT_TYPE } from "./type";
+import { Props, TEXT_TYPE } from "../../../@types/text.model";
 
 export default function Text({
   className,

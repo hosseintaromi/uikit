@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import Base, { COLOR_ENUM } from "../../../@types/types";
+import Base, { COLOR_ENUM } from "./types";
 
 export default interface Props
   extends Base,

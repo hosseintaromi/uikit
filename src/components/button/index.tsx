@@ -1,7 +1,7 @@
 import cn from "../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../@types/types";
-import { BUTTON_TYPE, Props, VARIANT_ENUM } from "./type";
+import { BUTTON_TYPE, Props, VARIANT_ENUM } from "../../@types/button.model";
 import Container from "../container";
 
 const ButtonLoading = () => (

@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import Base, { SIZE_ENUM } from "../../../@types/types";
+import Base, { SIZE_ENUM } from "./types";
 
 export enum TEXT_TYPE {
   SPAN = "span",
