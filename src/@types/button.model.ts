@@ -14,9 +14,7 @@ export enum VARIANT_ENUM {
   TEXT = "text",
 }
 
-export interface ButtonType
-  extends Base,
-    ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonType extends Base {
   isLoading?: boolean;
   disabled?: boolean;
   type?: BUTTON_TYPE;
