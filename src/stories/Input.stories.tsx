@@ -2,6 +2,7 @@ import { Meta, Story } from "@storybook/react";
 import { SIZE_ENUM } from "../@types/types";
 import "./output.css";
 import Text from "../components/typography/text";
+import { Input } from "../components";
 
 type DemoProps = {
   length: number;
@@ -9,10 +10,11 @@ type DemoProps = {
 
 const Demo = ({ length }: DemoProps) => (
   <>
-    <p className="text-amber-700 text-2xl">hello</p>
-    <Text center size={SIZE_ENUM.XXS} className="text-amber-700">
-      helloeeee
-    </Text>
+    <Input
+      label="slsls"
+      background="bg-[#333333]"
+      LabelClassName="text-white"
+    />
   </>
 );
 

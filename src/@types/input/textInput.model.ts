@@ -28,4 +28,6 @@ export default interface TextInputType
   Icon?: (params: any) => JSX.Element;
   LeftIcon?: (params: any) => JSX.Element;
   LeftIconClass?: string;
+  LabelClassName?: string;
+  background: string;
 }

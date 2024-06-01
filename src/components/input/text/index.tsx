@@ -7,6 +7,7 @@ import Container from "../../container";
 import TextInputType, {
   INPUT_TYPES,
 } from "../../../@types/input/textInput.model";
+import "./index.css";
 import Text from "../../typography/text";
 
 import ICON_SIZE, { ICON_COLOR } from "../../../constant/icon-size-color";
@@ -16,20 +17,22 @@ function TextInput(
     id = "",
     value = "",
     className,
+    LabelClassName,
     type = INPUT_TYPES.TEXT,
-    size = SIZE_ENUM.MD,
+    size = SIZE_ENUM.XXL,
     label,
     Icon,
     LeftIcon,
     stickyText,
     errorMessage,
     LeftIconClass,
+    background,
     ...other
   }: TextInputType,
   ref: any,
 ) {
   return (
-    <Container className="relative">
+    <Container className="relative  float-label-input">
       {errorMessage && (
         <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
           {errorMessage}
@@ -38,7 +41,13 @@ function TextInput(
       {label && (
         <label
           htmlFor={id}
-          className="mb-2 block text-sm font-medium text-gray-900"
+          className={cn(
+            "absolute left-2 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block text-sm font-medium text-gray-900",
+            size === SIZE_ENUM.XL && "top-3",
+            size === SIZE_ENUM.XXL && "top-4",
+            LabelClassName,
+            background,
+          )}
         >
           {label}
         </label>
@@ -56,19 +65,22 @@ function TextInput(
         )}
         <input
           className={cn(
-            "block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
-            size === SIZE_ENUM.XXS && "h-4",
-            size === SIZE_ENUM.XS && "h-6",
-            size === SIZE_ENUM.SM && "h-7",
-            size === SIZE_ENUM.MD && "h-8",
-            size === SIZE_ENUM.LG && "h-10",
+            "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
+            // size === SIZE_ENUM.XXS && "h-4",
+            // size === SIZE_ENUM.XS && "h-6",
+            // size === SIZE_ENUM.SM && "h-7",
+            // size === SIZE_ENUM.MD && "h-8",
+            // size === SIZE_ENUM.LG && "h-10",
             size === SIZE_ENUM.XL && "h-12",
+            size === SIZE_ENUM.XXL && "h-14",
+            background,
             Icon && "pr-8",
             stickyText && "pl-8",
             errorMessage &&
               "border-error focus:border-error border-solid focus:ring-0",
             className,
           )}
+          placeholder={" "}
           ref={ref}
           value={value}
           type={type}
