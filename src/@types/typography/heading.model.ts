@@ -1,6 +1,4 @@
-import { HTMLAttributes } from "react";
-
-import Base, { COLOR_ENUM } from "./types";
+import Base, { COLOR_ENUM } from "../types";
 
 export interface HeadingType extends Base {
   type: HEADING_TYPE;

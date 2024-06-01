@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import Base from "../../@types/types";
+import Base from "./types";
 
 export enum CONTAINER_TAG_TYPE {
   DIV = "div",

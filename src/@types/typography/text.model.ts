@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import Base, { COLOR_ENUM, SIZE_ENUM } from "./types";
+import Base, { COLOR_ENUM, SIZE_ENUM } from "../types";
 
 export enum TEXT_TYPE {
   SPAN = "span",
@@ -17,7 +17,7 @@ export type TextType = {
   bold?: boolean;
   inline?: boolean;
   center?: boolean;
-  color: COLOR_ENUM;
+  color?: COLOR_ENUM;
   children?: ReactNode;
   className?: string;
 };
