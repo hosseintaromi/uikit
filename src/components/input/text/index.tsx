@@ -26,13 +26,13 @@ function TextInput(
     stickyText,
     errorMessage,
     LeftIconClass,
-    background,
+    background = "bg-inherit",
     ...other
   }: TextInputType,
   ref: any,
 ) {
   return (
-    <Container className="relative  float-label-input">
+    <Container className="relative  float-label-input bg-inherit	">
       {errorMessage && (
         <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
           {errorMessage}

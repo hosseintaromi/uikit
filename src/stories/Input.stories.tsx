@@ -10,11 +10,7 @@ type DemoProps = {
 
 const Demo = ({ length }: DemoProps) => (
   <>
-    <Input
-      label="slsls"
-      background="bg-[#333333]"
-      LabelClassName="text-white"
-    />
+    <Input label="slsls" />
   </>
 );
 
