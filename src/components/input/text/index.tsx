@@ -29,7 +29,7 @@ function TextInput(
   ref: any,
 ) {
   return (
-    <Container>
+    <Container className="relative">
       {errorMessage && (
         <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
           {errorMessage}

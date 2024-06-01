@@ -1,6 +1,7 @@
 import { Meta, Story } from "@storybook/react";
-import Button from "../components/button";
-import { COLOR_ENUM } from "../@types/types";
+import { SIZE_ENUM } from "../@types/types";
+import "./output.css";
+import Text from "../components/typography/text";
 
 type DemoProps = {
   length: number;
@@ -8,7 +9,10 @@ type DemoProps = {
 
 const Demo = ({ length }: DemoProps) => (
   <>
-    <Button color={COLOR_ENUM.PRIMARY}> hello{length}</Button>
+    <p className="text-amber-700 text-2xl">hello</p>
+    <Text center size={SIZE_ENUM.XXS} className="text-amber-700">
+      helloeeee
+    </Text>
   </>
 );
 
