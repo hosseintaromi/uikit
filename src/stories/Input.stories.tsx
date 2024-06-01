@@ -9,9 +9,9 @@ type DemoProps = {
 };
 
 const Demo = ({ length }: DemoProps) => (
-  <>
+  <div style={{ direction: "rtl" }}>
     <Input label="slsls" />
-  </>
+  </div>
 );
 
 const meta: Meta = {
