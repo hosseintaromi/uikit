@@ -10,7 +10,11 @@ type DemoProps = {
 
 const Demo = ({ length }: DemoProps) => (
   <div style={{ direction: "rtl" }}>
-    <Input label="slsls" />
+    <Input
+      label="slsls"
+      background="bg-[#333333]"
+      LabelClassName="text-white"
+    />
   </div>
 );
 

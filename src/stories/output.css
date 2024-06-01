@@ -625,6 +625,10 @@ video {
   top: 1rem;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .me-3 {
   margin-inline-end: 0.75rem;
 }
@@ -895,6 +899,11 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-\[\#333333\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
 .p-2 {

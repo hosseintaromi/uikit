@@ -42,7 +42,7 @@ function TextInput(
         <label
           htmlFor={id}
           className={cn(
-            "absolute right-2 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block text-sm font-medium text-gray-900",
+            "absolute right-4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block text-sm font-medium text-gray-900",
             size === SIZE_ENUM.XL && "top-3",
             size === SIZE_ENUM.XXL && "top-4",
             LabelClassName,
