@@ -1,13 +1,13 @@
 {
   "name": "ozone-uikit",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "unliveable ui kit",
   "scripts": {
     "prepare": "husky install",
     "build": "rollup -c",
     "test": "jest",
     "watch:sb": "storybook dev -p 6006",
-    "watch:tailwind":"npx tailwindcss -i ./src/stories/input.css -o ./src/stories/output.css --watch",
+    "watch:tailwind": "npx tailwindcss -i ./src/stories/input.css -o ./src/stories/output.css --watch",
     "sb": "concurrently 'yarn:watch:*'",
     "build-storybook": "storybook build",
     "pb": "npm version patch && rollup -c && npm publish",
