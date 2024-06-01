@@ -42,11 +42,16 @@ function TextInput(
         <label
           htmlFor={id}
           className={cn(
-            "absolute right-4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block text-sm font-medium text-gray-900",
-            size === SIZE_ENUM.XL && "top-3",
-            size === SIZE_ENUM.XXL && "top-4",
+            "absolute right-2 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
             LabelClassName,
             background,
+            size === SIZE_ENUM.XXS && "text-xs",
+            size === SIZE_ENUM.XS && "text-xs",
+            size === SIZE_ENUM.SM && "text-xs",
+            size === SIZE_ENUM.MD && "text-xs",
+            size === SIZE_ENUM.LG && "text-sm",
+            size === SIZE_ENUM.XL && "text-base",
+            size === SIZE_ENUM.XXL && "text-lg",
           )}
         >
           {label}
@@ -66,11 +71,11 @@ function TextInput(
         <input
           className={cn(
             "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
-            // size === SIZE_ENUM.XXS && "h-4",
-            // size === SIZE_ENUM.XS && "h-6",
-            // size === SIZE_ENUM.SM && "h-7",
-            // size === SIZE_ENUM.MD && "h-8",
-            // size === SIZE_ENUM.LG && "h-10",
+            size === SIZE_ENUM.XXS && "h-4",
+            size === SIZE_ENUM.XS && "h-6",
+            size === SIZE_ENUM.SM && "h-7",
+            size === SIZE_ENUM.MD && "h-8",
+            size === SIZE_ENUM.LG && "h-10",
             size === SIZE_ENUM.XL && "h-12",
             size === SIZE_ENUM.XXL && "h-14",
             background,

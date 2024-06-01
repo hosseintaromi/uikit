@@ -1,7 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 import { SIZE_ENUM } from "../@types/types";
 import "./output.css";
-import Text from "../components/typography/text";
 import { Input } from "../components";
 
 type DemoProps = {
@@ -14,6 +13,7 @@ const Demo = ({ length }: DemoProps) => (
       label="slsls"
       background="bg-[#333333]"
       LabelClassName="text-white"
+      size={SIZE_ENUM.LG}
     />
   </div>
 );

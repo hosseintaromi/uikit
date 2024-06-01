@@ -1,6 +1,11 @@
-
 .float-label-input:focus-within label,
 .float-label-input input:not(:placeholder-shown) + label {
-    transform: translateY(-1.5rem) scale(0.75);
-
+  /* transform: translateY(-2.2rem) scale(0.75); */
+  top: 0%;
+  transition: top 300ms;
+}
+.float-label-input:not(:focus) label,
+.float-label-input input:not(:placeholder-shown) + label {
+  top: "50%";
+  transition: top 300ms;
 }
