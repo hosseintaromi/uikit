@@ -13,25 +13,28 @@ type DemoProps = {
 };
 
 const Demo = ({ length }: DemoProps) => {
-  const [val, setVal] = useState("");
+  const [val, setVal] = useState(false);
 
   return (
-    <div style={{ direction: "rtl" }}>
+    <div
+      style={{
+        direction: "rtl",
+        display: "flex",
+        flexDirection: "column",
+        gap: "4rem",
+      }}
+    >
       <Input
         label="شماره کارت"
-        // background="bg-[#333333]"
-        // LabelClassName="text-white"
-        // stickyText="تومان"
-        LeftIcon={() => (
-          <AiFillAlipayCircle
-            size={ICON_SIZE.lg}
-            color={ICON_COLOR.light_blue}
-          />
-        )}
-        size={SIZE_ENUM.XL}
-        value={val}
-        onChange={(e) => setVal(e.target.value)}
+        size={SIZE_ENUM.XXS}
+        errorMessage={val ? "slm" : ""}
       />
+      <Input
+        label="رمز کارت حسین آقا"
+        size={SIZE_ENUM.XXS}
+        errorMessage={val ? "slm" : ""}
+      />
+      <button onClick={() => setVal((pre) => !pre)}>sdf</button>
     </div>
   );
 };

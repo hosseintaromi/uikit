@@ -17,7 +17,7 @@ function TextInput(
     id = "",
     value = "",
     className,
-    LabelClassName,
+    labelClassName,
     type = INPUT_TYPES.TEXT,
     size = SIZE_ENUM.XXL,
     label,
@@ -32,13 +32,8 @@ function TextInput(
   ref: any,
 ) {
   return (
-    <>
+    <Container className="relative">
       <Container className="relative  float-label-input bg-inherit	">
-        {errorMessage && (
-          <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
-            {errorMessage}
-          </Text>
-        )}
         {Icon && (
           <Container center className="absolute inset-y-0 right-0 w-8">
             <Icon />
@@ -60,7 +55,7 @@ function TextInput(
         <input
           placeholder=" "
           className={cn(
-            "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
+            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
             size === SIZE_ENUM.XXS && "h-4",
             size === SIZE_ENUM.XS && "h-6",
             size === SIZE_ENUM.SM && "h-7",
@@ -72,11 +67,11 @@ function TextInput(
             Icon && "pr-8",
             stickyText && "pl-8",
             errorMessage &&
-              "border-error focus:border-error border-solid focus:ring-0",
+              "border-danger focus:border-danger-500 border-solid focus:ring-0",
             className,
           )}
           ref={ref}
-          value={value && value}
+          {...(value ? { value } : {})}
           type={type}
           id={id}
           {...other}
@@ -87,8 +82,8 @@ function TextInput(
           <label
             htmlFor={id}
             className={cn(
-              "absolute right-2 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
-              LabelClassName,
+              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
+              labelClassName,
               background,
               size === SIZE_ENUM.XXS && "text-xs",
               size === SIZE_ENUM.XS && "text-xs",
@@ -97,13 +92,23 @@ function TextInput(
               size === SIZE_ENUM.LG && "text-sm",
               size === SIZE_ENUM.XL && "text-base",
               size === SIZE_ENUM.XXL && "text-lg",
+              errorMessage && "text-danger",
             )}
           >
             {label}
           </label>
         )}
       </Container>
-    </>
+      {errorMessage && (
+        <Text
+          className="px-2 absolute -bottom-7"
+          size={SIZE_ENUM.MD}
+          color={COLOR_ENUM.ERROR}
+        >
+          {errorMessage}
+        </Text>
+      )}
+    </Container>
   );
 }
 
