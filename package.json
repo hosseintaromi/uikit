@@ -1,6 +1,6 @@
 {
   "name": "ozone-uikit",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "description": "unliveable ui kit",
   "scripts": {
     "prepare": "husky install",
