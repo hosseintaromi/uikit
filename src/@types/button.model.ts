@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
-import { IconType } from "react-icons";
 
-import Base, { COLOR_ENUM, SIZE_ENUM } from "../../@types/types";
+import Base, { COLOR_ENUM, SIZE_ENUM } from "./types";
 
 export enum BUTTON_TYPE {
   BUTTON = "button",
@@ -15,12 +14,13 @@ export enum VARIANT_ENUM {
   TEXT = "text",
 }
 
-export interface Props extends Base, ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonType extends Base {
   isLoading?: boolean;
   disabled?: boolean;
   type?: BUTTON_TYPE;
   size?: SIZE_ENUM;
   variant?: VARIANT_ENUM;
   color?: COLOR_ENUM;
-  Icon?: IconType;
+  // FIXME: fix icon type
+  Icon?: any;
 }
