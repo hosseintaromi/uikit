@@ -77,6 +77,7 @@ function TextInput(
               "border-error focus:border-error border-solid focus:ring-0",
             className,
           )}
+          {...other}
         />
 
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
