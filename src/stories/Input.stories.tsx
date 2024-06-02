@@ -26,6 +26,7 @@ const Demo = ({ length }: DemoProps) => {
       <Input
         label="رمز کارت حسین آقا"
         size={SIZE_ENUM.XL}
+        errorMessage="slm"
         value={val}
         onChange={(e) => setVal(e.target.value)}
       />

@@ -613,8 +613,8 @@ video {
   right: 0px;
 }
 
-.right-2 {
-  right: 0.5rem;
+.right-4 {
+  right: 1rem;
 }
 
 .top-2\/4 {
@@ -623,14 +623,6 @@ video {
 
 .top-4 {
   top: 1rem;
-}
-
-.right-3 {
-  right: 0.75rem;
-}
-
-.right-4 {
-  right: 1rem;
 }
 
 .me-3 {
@@ -857,9 +849,9 @@ video {
   border-color: rgb(255 111 72 / var(--tw-border-opacity));
 }
 
-.bg-\[\#333333\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+.border-danger {
+  --tw-border-opacity: 1;
+  border-color: rgb(237 44 58 / var(--tw-border-opacity));
 }
 
 .bg-blue-600 {
@@ -1128,6 +1120,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-danger {
+  --tw-text-opacity: 1;
+  color: rgb(237 44 58 / var(--tw-text-opacity));
+}
+
+.text-alert-300 {
+  --tw-text-opacity: 1;
+  color: rgb(249 169 14 / var(--tw-text-opacity));
+}
+
 .opacity-50 {
   opacity: 0.5;
 }
@@ -1262,6 +1264,11 @@ video {
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
   border-color: rgb(36 200 176 / var(--tw-border-opacity));
+}
+
+.focus\:border-danger-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(205 29 41 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {

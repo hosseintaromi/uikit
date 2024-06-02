@@ -67,7 +67,7 @@ function TextInput(
             Icon && "pr-8",
             stickyText && "pl-8",
             errorMessage &&
-              "border-error focus:border-error border-solid focus:ring-0",
+              "border-danger focus:border-danger-500 border-solid focus:ring-0",
             className,
           )}
           ref={ref}
@@ -92,6 +92,7 @@ function TextInput(
               size === SIZE_ENUM.LG && "text-sm",
               size === SIZE_ENUM.XL && "text-base",
               size === SIZE_ENUM.XXL && "text-lg",
+              errorMessage && "text-danger",
             )}
           >
             {label}
@@ -99,7 +100,7 @@ function TextInput(
         )}
       </Container>
       {errorMessage && (
-        <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
+        <Text className="px-2" size={SIZE_ENUM.MD} color={COLOR_ENUM.ERROR}>
           {errorMessage}
         </Text>
       )}
