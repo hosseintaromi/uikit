@@ -34,11 +34,6 @@ function TextInput(
   return (
     <>
       <Container className="relative  float-label-input bg-inherit	">
-        {errorMessage && (
-          <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
-            {errorMessage}
-          </Text>
-        )}
         {Icon && (
           <Container center className="absolute inset-y-0 right-0 w-8">
             <Icon />
@@ -60,7 +55,7 @@ function TextInput(
         <input
           placeholder=" "
           className={cn(
-            "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
+            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
             size === SIZE_ENUM.XXS && "h-4",
             size === SIZE_ENUM.XS && "h-6",
             size === SIZE_ENUM.SM && "h-7",
@@ -103,6 +98,11 @@ function TextInput(
           </label>
         )}
       </Container>
+      {errorMessage && (
+        <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
+          {errorMessage}
+        </Text>
+      )}
     </>
   );
 }

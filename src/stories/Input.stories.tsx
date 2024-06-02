@@ -22,6 +22,7 @@ const Demo = ({ length }: DemoProps) => {
         // background="bg-[#333333]"
         // LabelClassName="text-white"
         // stickyText="تومان"
+        errorMessage="hslle"
         LeftIcon={() => (
           <AiFillAlipayCircle
             size={ICON_SIZE.lg}

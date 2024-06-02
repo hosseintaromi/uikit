@@ -605,10 +605,6 @@ video {
   bottom: 0px;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .left-4 {
   left: 1rem;
 }
@@ -623,10 +619,6 @@ video {
 
 .top-2\/4 {
   top: 50%;
-}
-
-.top-3 {
-  top: 0.75rem;
 }
 
 .top-4 {
@@ -1086,11 +1078,6 @@ video {
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-50 {
