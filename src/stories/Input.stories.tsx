@@ -19,16 +19,12 @@ const Demo = ({ length }: DemoProps) => {
     <div style={{ direction: "rtl" }}>
       <Input
         label="شماره کارت"
-        // background="bg-[#333333]"
-        // LabelClassName="text-white"
-        // stickyText="تومان"
-        errorMessage="hslle"
-        LeftIcon={() => (
-          <AiFillAlipayCircle
-            size={ICON_SIZE.lg}
-            color={ICON_COLOR.light_blue}
-          />
-        )}
+        size={SIZE_ENUM.XL}
+        value={val}
+        onChange={(e) => setVal(e.target.value)}
+      />
+      <Input
+        label="رمز کارت حسین آقا"
         size={SIZE_ENUM.XL}
         value={val}
         onChange={(e) => setVal(e.target.value)}

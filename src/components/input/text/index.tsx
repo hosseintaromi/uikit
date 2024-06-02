@@ -17,7 +17,7 @@ function TextInput(
     id = "",
     value = "",
     className,
-    LabelClassName,
+    labelClassName,
     type = INPUT_TYPES.TEXT,
     size = SIZE_ENUM.XXL,
     label,
@@ -82,8 +82,8 @@ function TextInput(
           <label
             htmlFor={id}
             className={cn(
-              "absolute right-2 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
-              LabelClassName,
+              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
+              labelClassName,
               background,
               size === SIZE_ENUM.XXS && "text-xs",
               size === SIZE_ENUM.XS && "text-xs",
