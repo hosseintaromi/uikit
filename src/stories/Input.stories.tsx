@@ -9,10 +9,10 @@ import { AiFillAlipayCircle } from "react-icons/ai";
 import ICON_SIZE, { ICON_COLOR } from "../constant/icon-size-color";
 
 type DemoProps = {
-  length: number;
+  label: string;
 };
 
-const Demo = ({ length }: DemoProps) => {
+const Demo = ({ label }: DemoProps) => {
   const [val, setVal] = useState(false);
 
   return (
@@ -21,17 +21,12 @@ const Demo = ({ length }: DemoProps) => {
         direction: "rtl",
         display: "flex",
         flexDirection: "column",
-        gap: "4rem",
+        gap: "2rem",
       }}
     >
       <Input
-        label="شماره کارت"
-        size={SIZE_ENUM.XXS}
-        errorMessage={val ? "slm" : ""}
-      />
-      <Input
-        label="رمز کارت حسین آقا"
-        size={SIZE_ENUM.XXS}
+        label={label}
+        size={SIZE_ENUM.XL}
         errorMessage={val ? "slm" : ""}
       />
       <button onClick={() => setVal((pre) => !pre)}>sdf</button>
@@ -40,14 +35,14 @@ const Demo = ({ length }: DemoProps) => {
 };
 
 const meta: Meta = {
-  title: "base",
+  title: "Design System/Input",
   component: Demo,
   argTypes: {
-    length: {
+    label: {
       control: {
-        type: "number",
+        type: "string",
       },
-      defaultValue: 10,
+      defaultValue: "نام و نام خانوادگی",
     },
   },
   parameters: {
@@ -57,5 +52,5 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<DemoProps> = () => <Demo length={22} />;
-export const Default = Template.bind({});
+const Template: Story<DemoProps> = () => <Demo label="sss" />;
+export const TextInput = Template.bind({});
