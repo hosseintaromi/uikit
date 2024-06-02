@@ -32,7 +32,7 @@ function TextInput(
   ref: any,
 ) {
   return (
-    <>
+    <Container>
       <Container className="relative  float-label-input bg-inherit	">
         {Icon && (
           <Container center className="absolute inset-y-0 right-0 w-8">
@@ -104,7 +104,7 @@ function TextInput(
           {errorMessage}
         </Text>
       )}
-    </>
+    </Container>
   );
 }
 
