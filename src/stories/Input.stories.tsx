@@ -21,7 +21,7 @@ const Demo = ({ length }: DemoProps) => {
         direction: "rtl",
         display: "flex",
         flexDirection: "column",
-        gap: "2rem",
+        gap: "4rem",
       }}
     >
       <Input
