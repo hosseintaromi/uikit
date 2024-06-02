@@ -58,8 +58,6 @@ function TextInput(
           </Container>
         )}
         <input
-          type="text"
-          id={id}
           placeholder=" "
           className={cn(
             "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
@@ -77,6 +75,10 @@ function TextInput(
               "border-error focus:border-error border-solid focus:ring-0",
             className,
           )}
+          ref={ref}
+          value={value}
+          type={type}
+          id={id}
           {...other}
         />
 
