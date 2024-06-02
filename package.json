@@ -48,6 +48,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.4",
     "@types/react": "^18.2.21",
+    "@types/react-icons": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "babel-jest": "^29.6.4",
@@ -110,5 +111,6 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  }
+  },
+  "dependencies": {}
 }

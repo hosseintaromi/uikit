@@ -26,38 +26,19 @@ function TextInput(
     stickyText,
     errorMessage,
     LeftIconClass,
-    background = "bg-inherit",
+    background = "bg-white",
     ...other
   }: TextInputType,
   ref: any,
 ) {
   return (
-    <Container className="relative  float-label-input bg-inherit	">
-      {errorMessage && (
-        <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
-          {errorMessage}
-        </Text>
-      )}
-      {label && (
-        <label
-          htmlFor={id}
-          className={cn(
-            "absolute right-2 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
-            LabelClassName,
-            background,
-            size === SIZE_ENUM.XXS && "text-xs",
-            size === SIZE_ENUM.XS && "text-xs",
-            size === SIZE_ENUM.SM && "text-xs",
-            size === SIZE_ENUM.MD && "text-xs",
-            size === SIZE_ENUM.LG && "text-sm",
-            size === SIZE_ENUM.XL && "text-base",
-            size === SIZE_ENUM.XXL && "text-lg",
-          )}
-        >
-          {label}
-        </label>
-      )}
-      <Container className={cn((Icon || LeftIcon || stickyText) && "relative")}>
+    <>
+      <Container className="relative  float-label-input bg-inherit	">
+        {errorMessage && (
+          <Text size={SIZE_ENUM.XS} color={COLOR_ENUM.ERROR}>
+            {errorMessage}
+          </Text>
+        )}
         {Icon && (
           <Container center className="absolute inset-y-0 right-0 w-8">
             <Icon />
@@ -68,7 +49,18 @@ function TextInput(
             <Text>{stickyText}</Text>
           </Container>
         )}
+        {LeftIcon && (
+          <Container
+            center
+            className={cn("absolute left-4 top-4", LeftIconClass)}
+          >
+            <LeftIcon />
+          </Container>
+        )}
         <input
+          type="text"
+          id={id}
+          placeholder=" "
           className={cn(
             "focus:outline-none focus:shadow-outline py-3 px-3  appearance-none leading-normal focus:border-blue-400 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
             size === SIZE_ENUM.XXS && "h-4",
@@ -85,23 +77,30 @@ function TextInput(
               "border-error focus:border-error border-solid focus:ring-0",
             className,
           )}
-          placeholder={" "}
-          ref={ref}
-          value={value}
-          type={type}
-          id={id}
-          {...other}
         />
-        {LeftIcon && (
-          <Container
-            center
-            className={cn("absolute left-4 top-4", LeftIconClass)}
+
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        {label && (
+          <label
+            htmlFor={id}
+            className={cn(
+              "absolute right-2 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
+              LabelClassName,
+              background,
+              size === SIZE_ENUM.XXS && "text-xs",
+              size === SIZE_ENUM.XS && "text-xs",
+              size === SIZE_ENUM.SM && "text-xs",
+              size === SIZE_ENUM.MD && "text-xs",
+              size === SIZE_ENUM.LG && "text-sm",
+              size === SIZE_ENUM.XL && "text-base",
+              size === SIZE_ENUM.XXL && "text-lg",
+            )}
           >
-            <LeftIcon size={ICON_SIZE.md} color={ICON_COLOR.gray} />
-          </Container>
+            {label}
+          </label>
         )}
       </Container>
-    </Container>
+    </>
   );
 }
 
