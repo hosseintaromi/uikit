@@ -76,7 +76,7 @@ function TextInput(
             className,
           )}
           ref={ref}
-          value={value && value}
+          {...(value ? { value } : {})}
           type={type}
           id={id}
           {...other}
