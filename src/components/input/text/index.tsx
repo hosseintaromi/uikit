@@ -31,6 +31,7 @@ function TextInput(
   }: TextInputType,
   ref: any,
 ) {
+  console.log(other);
   return (
     <>
       <Container className="relative  float-label-input bg-inherit	">
@@ -76,7 +77,7 @@ function TextInput(
             className,
           )}
           ref={ref}
-          value={value}
+          // value={value}
           type={type}
           id={id}
           {...other}
