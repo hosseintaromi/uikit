@@ -13,23 +13,28 @@ type DemoProps = {
 };
 
 const Demo = ({ length }: DemoProps) => {
-  const [val, setVal] = useState("");
+  const [val, setVal] = useState(false);
 
   return (
-    <div style={{ direction: "rtl" }}>
+    <div
+      style={{
+        direction: "rtl",
+        display: "flex",
+        flexDirection: "column",
+        gap: "2rem",
+      }}
+    >
       <Input
         label="شماره کارت"
-        size={SIZE_ENUM.XL}
-        value={val}
-        onChange={(e) => setVal(e.target.value)}
+        size={SIZE_ENUM.XXS}
+        errorMessage={val ? "slm" : ""}
       />
       <Input
         label="رمز کارت حسین آقا"
-        size={SIZE_ENUM.XL}
-        errorMessage="slm"
-        value={val}
-        onChange={(e) => setVal(e.target.value)}
+        size={SIZE_ENUM.XXS}
+        errorMessage={val ? "slm" : ""}
       />
+      <button onClick={() => setVal((pre) => !pre)}>sdf</button>
     </div>
   );
 };

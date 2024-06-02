@@ -32,7 +32,7 @@ function TextInput(
   ref: any,
 ) {
   return (
-    <Container>
+    <Container className="relative">
       <Container className="relative  float-label-input bg-inherit	">
         {Icon && (
           <Container center className="absolute inset-y-0 right-0 w-8">
@@ -100,7 +100,11 @@ function TextInput(
         )}
       </Container>
       {errorMessage && (
-        <Text className="px-2" size={SIZE_ENUM.MD} color={COLOR_ENUM.ERROR}>
+        <Text
+          className="px-2 absolute -bottom-7"
+          size={SIZE_ENUM.MD}
+          color={COLOR_ENUM.ERROR}
+        >
           {errorMessage}
         </Text>
       )}
