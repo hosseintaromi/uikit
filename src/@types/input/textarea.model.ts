@@ -1,9 +1,9 @@
 import { ReactNode, TextareaHTMLAttributes } from "react";
 import { AllowedInputTypes } from "react-otp-input";
 
-import { SIZE_ENUM, Base } from "../types";
+import Base, { SIZE_ENUM } from "../types";
 import { INPUT_VARIANTS } from "./textInput.model";
-import { INPUT_TYPES, BaseProps } from "../input";
+import BaseProps, { INPUT_TYPES } from "../input";
 
 type TextAreaType = {
   label?: string;

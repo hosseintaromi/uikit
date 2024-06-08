@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from "react";
 
-import { SIZE_ENUM, Base } from "../types";
-import { INPUT_TYPES, BaseProps } from "../input";
+import Base, { SIZE_ENUM } from "../types";
+import BaseProps, { INPUT_TYPES } from "../input";
 
 export enum INPUT_VARIANTS {
   SIMPLE = "SIMPLE",
