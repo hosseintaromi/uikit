@@ -8,7 +8,7 @@ import Container from "../../container";
 import "./index.css";
 import Text from "../../typography/text";
 import TextInputType from "../../../@types/input/textInput.model";
-import { INPUT_TYPES } from "../../../@types/input/input";
+import { INPUT_TYPES } from "../../../@types/input";
 
 function TextInput(
   {
