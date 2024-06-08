@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { AiFillGooglePlusCircle, AiFillHeart } from "react-icons/ai";
 import ICON_SIZE from "../constant/icon-size-color";
 import { Input } from "../components";
-import { INPUT_TYPES } from "../@types/input/input.model";
+import { INPUT_TYPES } from "../@types/input/input";
 import { SIZE_ENUM } from "../@types/types";
 
 type InputPropsAndCustomArgs = React.ComponentProps<typeof Input>;

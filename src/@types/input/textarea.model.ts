@@ -3,7 +3,7 @@ import { AllowedInputTypes } from "react-otp-input";
 
 import Base, { SIZE_ENUM } from "../types";
 import { INPUT_TYPES, INPUT_VARIANTS } from "./textInput.model";
-import BaseProps from "./input.model";
+import BaseProps from "./input";
 
 type TextAreaType = {
   label?: string;

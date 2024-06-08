@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from "react";
 
 import Base, { SIZE_ENUM } from "../types";
-import BaseProps from "./input.model";
+import BaseProps from "./input";
 
 export enum INPUT_TYPES {
   TEXT = "text",
