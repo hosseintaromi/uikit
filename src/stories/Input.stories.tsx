@@ -8,7 +8,7 @@ import { SIZE_ENUM } from "../@types/types";
 
 type InputPropsAndCustomArgs = React.ComponentProps<typeof Input>;
 
-const None = () => <></>;
+const None = undefined;
 const GooglePlus = () => <AiFillGooglePlusCircle size={ICON_SIZE.lg} />;
 const Heart = () => <AiFillHeart size={ICON_SIZE.lg} />;
 
@@ -85,11 +85,12 @@ export const TextInput: Story = {
     labelClassName: {
       description: "you can pass class name to input",
     },
+    autoFocus: {},
   },
   args: {
     label: "شماره کارت خود را وارد کنید",
     errorMessage: "",
-    LeftIcon: () => <></>,
+    LeftIcon: undefined,
     type: INPUT_TYPES.TEXT,
     size: SIZE_ENUM.XXL,
     stickyText: "",

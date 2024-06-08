@@ -39,7 +39,6 @@ function TextInput(
             <Icon />
           </Container>
         )}
-        {console.log(LeftIcon)}
         {LeftIcon === undefined && stickyText && (
           <Container center className="absolute inset-y-0 left-4">
             <Text>{stickyText}</Text>
