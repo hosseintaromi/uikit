@@ -1,4 +1,4 @@
-export default interface BaseProps {
+export interface BaseProps {
   error?: boolean;
   required?: boolean;
   disabled?: boolean;
