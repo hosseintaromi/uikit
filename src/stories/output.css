@@ -1,4 +1,5 @@
-body {
+.sb-anchor,
+.sb-main-padded {
   direction: rtl;
 }
 
@@ -633,6 +634,10 @@ video {
   top: 1rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .me-3 {
   margin-inline-end: 0.75rem;
 }
@@ -1043,6 +1048,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[80\%\] {
+  font-size: 80%;
 }
 
 .font-bold {

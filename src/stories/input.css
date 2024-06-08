@@ -1,4 +1,5 @@
-body {
+.sb-anchor,
+.sb-main-padded {
   direction: rtl;
 }
 @tailwind base;
