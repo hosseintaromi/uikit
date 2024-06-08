@@ -39,7 +39,7 @@ function TextInput(
             <Icon />
           </Container>
         )}
-        {stickyText && (
+        {stickyText && !LeftIcon && (
           <Container center className="absolute inset-y-0 left-4">
             <Text>{stickyText}</Text>
           </Container>
@@ -83,7 +83,7 @@ function TextInput(
             htmlFor={id}
             className={cn(
               "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
-              Icon && "top-0 text-[80%]",
+              Icon && "top-0",
               labelClassName,
               background,
               size === SIZE_ENUM.XXS && "text-xs",
@@ -95,6 +95,7 @@ function TextInput(
               size === SIZE_ENUM.XXL && "text-lg",
               errorMessage && "text-danger",
             )}
+            style={Icon && { fontSize: "80%" }}
           >
             {label}
           </label>
