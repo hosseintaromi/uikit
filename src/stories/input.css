@@ -1,3 +1,7 @@
+.sb-anchor,
+.sb-main-padded {
+  direction: rtl;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
