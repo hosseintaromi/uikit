@@ -1,7 +1,7 @@
 import { ReactNode, TextareaHTMLAttributes } from "react";
 import { AllowedInputTypes } from "react-otp-input";
 
-import Base, { SIZE_ENUM } from "../types";
+import { SIZE_ENUM, Base } from "../types";
 import { INPUT_VARIANTS } from "./textInput.model";
 import { INPUT_TYPES, BaseProps } from "../input";
 

@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 
-export default interface Base {
+export interface Base {
   children?: ReactNode;
   className?: string;
 }
