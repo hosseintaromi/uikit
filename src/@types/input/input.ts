@@ -3,3 +3,10 @@ export default interface BaseProps {
   required?: boolean;
   disabled?: boolean;
 }
+
+export enum INPUT_TYPES {
+  TEXT = "text",
+  NUMBER = "number",
+  EMAIL = "email",
+  PASSWORD = "password",
+}

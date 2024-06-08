@@ -2,12 +2,13 @@ import { forwardRef } from "react";
 
 import cn from "../../../utils/clsxm";
 
-import { COLOR_ENUM, INPUT_TYPES, SIZE_ENUM } from "../../../@types/types";
+import { COLOR_ENUM, SIZE_ENUM } from "../../../@types/types";
 import Container from "../../container";
 
 import "./index.css";
 import Text from "../../typography/text";
 import TextInputType from "../../../@types/input/textInput.model";
+import { INPUT_TYPES } from "../../../@types/input/input";
 
 function TextInput(
   {
