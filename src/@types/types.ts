@@ -30,3 +30,10 @@ export enum COLOR_ENUM {
   BLACK = "black",
   WHITE = "white",
 }
+
+export enum INPUT_TYPES {
+  TEXT = "text",
+  NUMBER = "number",
+  EMAIL = "email",
+  PASSWORD = "password",
+}
