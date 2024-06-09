@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-import { COLOR_ENUM, SIZE_ENUM } from "./types";
+import Base, { COLOR_ENUM, SIZE_ENUM } from "./types";
 
 export enum TEXT_TYPE {
   SPAN = "span",
   P = "p",
 }
 
-export type TextType = {
+export interface TextType extends Base, HTMLAttributes<HTMLParagraphElement> {
   size?: SIZE_ENUM;
   type?: TEXT_TYPE;
   justify?: boolean;
@@ -20,4 +20,4 @@ export type TextType = {
   color?: COLOR_ENUM;
   children?: ReactNode;
   className?: string;
-};
+}
