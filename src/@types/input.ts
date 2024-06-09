@@ -9,4 +9,5 @@ export enum INPUT_TYPES {
   NUMBER = "number",
   EMAIL = "email",
   PASSWORD = "password",
+  TEL = "tel",
 }
