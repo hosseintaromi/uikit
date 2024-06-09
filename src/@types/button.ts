@@ -21,6 +21,5 @@ export interface ButtonType extends Base {
   size?: SIZE_ENUM;
   variant?: VARIANT_ENUM;
   color?: COLOR_ENUM;
-  // FIXME: fix icon type
-  Icon?: any;
+  Icon?: JSX.Element;
 }

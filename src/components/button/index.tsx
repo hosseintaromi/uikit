@@ -1,11 +1,7 @@
 import cn from "../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../@types/types";
-import {
-  BUTTON_TYPE,
-  ButtonType,
-  VARIANT_ENUM,
-} from "../../@types/button.model";
+import { BUTTON_TYPE, ButtonType, VARIANT_ENUM } from "../../@types/button";
 import Container from "../container";
 
 const ButtonLoading = () => (
@@ -85,7 +81,7 @@ export default function Button({
       )}
       type={type}
     >
-      {Icon && <Icon />}
+      {Icon && Icon}
       <Container center>
         {isLoading && <ButtonLoading />}
         {children}

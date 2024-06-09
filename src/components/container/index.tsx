@@ -1,5 +1,5 @@
 import { createElement } from "react";
-import { CONTAINER_TAG_TYPE, type Props } from "../../@types/container.model";
+import { CONTAINER_TAG_TYPE, type Props } from "../../@types/container";
 import cn from "../../utils/clsxm";
 
 export default function Container({
