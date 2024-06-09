@@ -74,8 +74,10 @@ export default function Button({
           variant === VARIANT_ENUM.TEXT &&
           "text-primary hover:bg-primary/10",
         disabled && "cursor-not-allowed opacity-50",
-        disabled && VARIANT_ENUM.DEFAULT && "bg-i-gray hover:bg-i-gray/50",
-        disabled && VARIANT_ENUM.OUTLINED && "border-gray-50 text-gray-50",
+        disabled &&
+          VARIANT_ENUM.DEFAULT &&
+          "bg-neutral-300 text-neutral-0 hover:bg-neutral-300",
+        disabled && VARIANT_ENUM.OUTLINED && "border-gray-50 text-white",
         Icon && "gap-1",
         className,
       )}
