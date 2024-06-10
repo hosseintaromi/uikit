@@ -24,7 +24,7 @@ function TextInput(
     stickyText,
     errorMessage,
     LeftIconClass,
-    background = "bg-white",
+    background = "bg-neutral-900",
     ...other
   }: TextInputType,
   ref: any,
@@ -83,7 +83,7 @@ function TextInput(
           <label
             htmlFor={id}
             className={cn(
-              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
+              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-white",
               size === SIZE_ENUM.XXS && "text-xs",
               size === SIZE_ENUM.XS && "text-xs",
               size === SIZE_ENUM.SM && "text-xs",
