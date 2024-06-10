@@ -26,7 +26,7 @@ const ButtonLoading = () => (
 
 export default function Button({
   children,
-  color,
+  color = COLOR_ENUM.PRIMARY,
   className,
   size = SIZE_ENUM.MD,
   variant = VARIANT_ENUM.DEFAULT,

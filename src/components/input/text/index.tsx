@@ -56,7 +56,7 @@ function TextInput(
         <input
           placeholder=" "
           className={cn(
-            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
+            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-white outline-none",
             size === SIZE_ENUM.XXS && "h-4",
             size === SIZE_ENUM.XS && "h-6",
             size === SIZE_ENUM.SM && "h-7",
