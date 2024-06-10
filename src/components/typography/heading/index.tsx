@@ -7,7 +7,7 @@ import { HeadingType, HEADING_TYPE } from "../../../@types/heading";
 
 export default function Heading({
   type = HEADING_TYPE.H3,
-  color = COLOR_ENUM.TEXT,
+  color = COLOR_ENUM.WHITE,
   className,
   children,
 }: HeadingType) {

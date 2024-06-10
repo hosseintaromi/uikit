@@ -14,7 +14,7 @@ export default function Text({
   light = false,
   inline = false,
   size = SIZE_ENUM.SM,
-  color = COLOR_ENUM.TEXT,
+  color = COLOR_ENUM.WHITE,
   type = TEXT_TYPE.P,
   children,
   center,
