@@ -14,13 +14,14 @@ export enum VARIANT_ENUM {
   TEXT = "text",
 }
 
-export interface ButtonType extends Base {
+export interface ButtonType
+  extends Base,
+    ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
   disabled?: boolean;
   type?: BUTTON_TYPE;
   size?: SIZE_ENUM;
   variant?: VARIANT_ENUM;
   color?: COLOR_ENUM;
-  // FIXME: fix icon type
-  Icon?: any;
+  Icon?: JSX.Element;
 }

@@ -4,13 +4,11 @@ import cn from "../../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../../@types/types";
 import Container from "../../container";
-import TextInputType, {
-  INPUT_TYPES,
-} from "../../../@types/input/textInput.model";
+
 import "./index.css";
 import Text from "../../typography/text";
-
-import ICON_SIZE, { ICON_COLOR } from "../../../constant/icon-size-color";
+import TextInputType from "../../../@types/input/textInput.model";
+import { INPUT_TYPES } from "../../../@types/input";
 
 function TextInput(
   {
@@ -26,7 +24,7 @@ function TextInput(
     stickyText,
     errorMessage,
     LeftIconClass,
-    background = "bg-white",
+    background = "bg-neutral-900",
     ...other
   }: TextInputType,
   ref: any,
@@ -58,7 +56,7 @@ function TextInput(
         <input
           placeholder=" "
           className={cn(
-            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-gray-900 outline-none",
+            "focus:outline-none focus:shadow-outline focus:border-primary py-3 px-3  appearance-none leading-normal  block w-full rounded-lg border border-neutral-500  bg-gray-50 p-2.5 text-sm text-white outline-none",
             size === SIZE_ENUM.XXS && "h-4",
             size === SIZE_ENUM.XS && "h-6",
             size === SIZE_ENUM.SM && "h-7",
@@ -74,7 +72,7 @@ function TextInput(
             className,
           )}
           ref={ref}
-          {...(value ? { value } : {})}
+          value={value && value}
           type={type}
           id={id}
           {...other}
@@ -85,7 +83,7 @@ function TextInput(
           <label
             htmlFor={id}
             className={cn(
-              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-gray-900",
+              "absolute right-4 -translate-y-2/4 top-2/4 pointer-events-none transition duration-200 ease-in-out py-0 px-2 text-grey-darker block  text-white",
               size === SIZE_ENUM.XXS && "text-xs",
               size === SIZE_ENUM.XS && "text-xs",
               size === SIZE_ENUM.SM && "text-xs",

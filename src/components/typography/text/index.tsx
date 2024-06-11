@@ -3,7 +3,7 @@ import { createElement } from "react";
 import cn from "../../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../../@types/types";
-import { TextType, TEXT_TYPE } from "../../../@types/typography/text.model";
+import { TextType, TEXT_TYPE } from "../../../@types/text";
 
 export default function Text({
   className,
@@ -14,7 +14,7 @@ export default function Text({
   light = false,
   inline = false,
   size = SIZE_ENUM.SM,
-  color = COLOR_ENUM.TEXT,
+  color = COLOR_ENUM.WHITE,
   type = TEXT_TYPE.P,
   children,
   center,

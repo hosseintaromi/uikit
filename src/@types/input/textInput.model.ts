@@ -1,15 +1,7 @@
 import { InputHTMLAttributes } from "react";
 
 import Base, { SIZE_ENUM } from "../types";
-import BaseProps from "./input.model";
-
-export enum INPUT_TYPES {
-  TEXT = "text",
-  NUMBER = "number",
-  EMAIL = "email",
-  PASSWORD = "password",
-  TEL = "tel",
-}
+import BaseProps, { INPUT_TYPES } from "../input";
 
 export enum INPUT_VARIANTS {
   SIMPLE = "SIMPLE",

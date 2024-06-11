@@ -1,11 +1,7 @@
 import cn from "../../utils/clsxm";
 
 import { COLOR_ENUM, SIZE_ENUM } from "../../@types/types";
-import {
-  BUTTON_TYPE,
-  ButtonType,
-  VARIANT_ENUM,
-} from "../../@types/button.model";
+import { BUTTON_TYPE, ButtonType, VARIANT_ENUM } from "../../@types/button";
 import Container from "../container";
 
 const ButtonLoading = () => (
@@ -30,7 +26,7 @@ const ButtonLoading = () => (
 
 export default function Button({
   children,
-  color,
+  color = COLOR_ENUM.PRIMARY,
   className,
   size = SIZE_ENUM.MD,
   variant = VARIANT_ENUM.DEFAULT,
@@ -78,14 +74,16 @@ export default function Button({
           variant === VARIANT_ENUM.TEXT &&
           "text-primary hover:bg-primary/10",
         disabled && "cursor-not-allowed opacity-50",
-        disabled && VARIANT_ENUM.DEFAULT && "bg-i-gray hover:bg-i-gray/50",
-        disabled && VARIANT_ENUM.OUTLINED && "border-gray-50 text-gray-50",
+        disabled &&
+          VARIANT_ENUM.DEFAULT &&
+          "bg-neutral-300 text-neutral-0 hover:bg-neutral-300",
+        disabled && VARIANT_ENUM.OUTLINED && "border-gray-50 text-white",
         Icon && "gap-1",
         className,
       )}
       type={type}
     >
-      {Icon && <Icon />}
+      {Icon && Icon}
       <Container center>
         {isLoading && <ButtonLoading />}
         {children}
