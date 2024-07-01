@@ -113,7 +113,9 @@ function TextInput(
           </Text>
         )}
       </Container>
-      {hint && <Text color={COLOR_ENUM.XLIGHT_GRAY}>{hint}</Text>}
+      {!errorMessage && hint && (
+        <Text color={COLOR_ENUM.XLIGHT_GRAY}>{hint}</Text>
+      )}
     </Container>
   );
 }
