@@ -106,7 +106,7 @@ function TextInput(
         {errorMessage && (
           <Text
             className="px-2 absolute -bottom-9"
-            size={SIZE_ENUM.MD}
+            size={SIZE_ENUM.SM}
             color={COLOR_ENUM.ERROR}
           >
             {errorMessage}
@@ -116,7 +116,7 @@ function TextInput(
           <Text
             className="px-2 absolute -bottom-9"
             color={COLOR_ENUM.XLIGHT_GRAY}
-            size={SIZE_ENUM.MD}
+            size={SIZE_ENUM.SM}
           >
             {hint}
           </Text>
