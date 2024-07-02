@@ -114,7 +114,7 @@ function TextInput(
         )}
         {!errorMessage && hint && (
           <Text
-            className="px-1 absolute -bottom-7"
+            className="px-2 absolute -bottom-7"
             color={COLOR_ENUM.XLIGHT_GRAY}
           >
             {hint}
