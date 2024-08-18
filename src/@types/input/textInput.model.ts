@@ -23,6 +23,6 @@ export default interface TextInputType
   labelClassName?: string;
   background?: string;
   hint?: string;
-  hitClass?: string;
+  hintClass?: string;
   errorMessageClass?: string;
 }

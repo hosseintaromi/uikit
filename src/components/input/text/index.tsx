@@ -25,7 +25,7 @@ function TextInput(
     errorMessage,
     LeftIconClass,
     background = "bg-neutral-900",
-    hitClass,
+    hintClass,
     errorMessageClass,
     hint,
     ...other
@@ -119,7 +119,7 @@ function TextInput(
         )}
         {!errorMessage && hint && (
           <Text
-            className={cn("px-2 absolute -bottom-10 leading-7", hitClass)}
+            className={cn("px-2 absolute -bottom-10 leading-7", hintClass)}
             color={COLOR_ENUM.XLIGHT_GRAY}
             size={SIZE_ENUM.SM}
           >
